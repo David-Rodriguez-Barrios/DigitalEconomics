@@ -230,7 +230,7 @@ def main():
             print('-------------------------\nCompany was accepted\n-------------------------')
             break
         else:print('\nCompany was not accepted\nplease try again\n')
-
+    
     #based creats an instance of the Company Class depending on which business the user picked
     if(user_input == accepted_companies[0]):
         the_company = Company(amazon, 'amazon'.capitalize())
@@ -325,7 +325,7 @@ def main():
     plt.xlabel('Date') #labels the x axis as dates
     tick_index = where_the_ticks_are(the_company.initial_date_index, the_company.final_date_index, 5) #shows where the ticks are along the graph and how many (5)
     ax1.set_xticks(tick_index, [the_company.array[i][0] for i in tick_index]) # gives the date to that corresponding tick index
-    plt.title('Stock price for {} within {} and {}'.format (user_input,initial_date, final_date)) # prints a title called "Stock price" and specificies the dates
+    plt.title('Stock price for {} within {} and {}'.format (user_input.capitalize(),initial_date, final_date)) # prints a title called "Stock price" and specificies the dates
     plt.legend(shadow = True, loc = 'upper left') # creates a legend at the upper left corner
 
     fig, ax2 = plt.subplots(figsize = (10,6)) 
@@ -334,7 +334,7 @@ def main():
     plt.xlabel('Date') #labels the x axis as dates
     tick_index = where_the_ticks_are(the_company.initial_date_index, the_company.final_date_index, 5) #shows where the ticks are along the graph and how many (5)
     ax2.set_xticks(tick_index, [the_company.array[i][0] for i in tick_index]) # gives the date to that corresponding tick index
-    plt.title('Market capitalization for {} within {} and {}'.format (user_input,initial_date, final_date)) # prints a title called "market capitlization" and specificies the dates
+    plt.title('Market capitalization for {} within {} and {}'.format (user_input.capitalize(),initial_date, final_date)) # prints a title called "market capitlization" and specificies the dates
     plt.legend(shadow = True, loc = 'upper left') # creates a legend at the upper left corner
 
     fig, ax3 = plt.subplots(figsize = (10,6)) 
@@ -343,7 +343,7 @@ def main():
     plt.xlabel('Date') #labels the x axis as dates
     tick_index = where_the_ticks_are(the_company.initial_date_index, the_company.final_date_index, 5) #shows where the ticks are along the graph and how many (5)
     ax3.set_xticks(tick_index, [the_company.array[i][0] for i in tick_index]) # gives the date to that corresponding tick index
-    plt.title('Market capitalization for {} within {} and {}'.format (user_input,initial_date, final_date)) # prints a title called "market capitlization" and specificies the dates
+    plt.title('Market capitalization for {} within {} and {}'.format (user_input.capitalize(),initial_date, final_date)) # prints a title called "market capitlization" and specificies the dates
     plt.legend(shadow = True, loc = 'upper left') # creates a legend at the upper left corner
 
     plt.show() # shows the graphs
